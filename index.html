@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Genius</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/favicon.ico">
+    </head>
+    <body>
+        <button id="abrir__recordes" onclick="recordes.abrir();">Recordes</button>
+        <div class="modal invisivel" id="modal__recordes">
+            <div class="recordes">
+                <button id="fechar" onclick="recordes.fechar();">x</button>
+                <h1>Recordes</h1>
+                <ul id="lista__recordes">
+                </ul>
+            </div>
+        </div>
+        <div class="modal invisivel" id="modal__colocar_nome">
+            <div class="colocar_nome">
+                <h1>Pederdeste :(</h1>
+                <h2>Insira seu nome</h2>
+                <input id="nome" type="text">
+                <button onclick="recordes.salvarRecorde();" id="salvar">Salvar recorde</button>
+            </div>
+        </div>
+        <div class="container__controlador">
+            <h1 id="titulo">Genius</h1>
+            <div class="wrapper__btns">
+                <button id="btn-repetir" onclick="animacoes.repetir();">R</button>
+                <button id="btn-iniciar" onclick="jogo.comecar();">S</button>
+                <button id="btn-mais-longo" onclick="animacoes.piscarSequenciaLentamente();">L</button>
+            </div>
+
+            <div id="contador">0</div>
+        </div>
+        <div class="container__game">
+            <button class="btn__game" id="btn1" onclick="jogo.apertar(0);"></button>
+            <button class="btn__game" id="btn2" onclick="jogo.apertar(1);"></button>
+            <button class="btn__game" id="btn3" onclick="jogo.apertar(2);"></button>
+            <button class="btn__game" id="btn4" onclick="jogo.apertar(3);"></button>
+        </div>
+    </body>
+    <script src="js/script-game.js"></script>
+    <script src="js/script-recordes.js"></script>
+    <script src="js/script-animacoes.js"></script>
+</html>
